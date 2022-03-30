@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Inicio from "./components/pages/Inicio";
+import Navigation from './components/common/Navigation'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Login from "./components/pages/Login";
+import Footer from "./components/common/Footer";
+import Error404 from "./components/pages/Error404";
+import AcercaDeNosotros from './components/pages/AcercaDeNosotros'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation></Navigation>
+      <Routes>
+      <Route exact path='/' element={<Inicio></Inicio>}></Route>
+      <Route exact path='/login' element={<Login></Login>}></Route>
+      <Route exact path='/acerca-de-nosotros' element={<AcercaDeNosotros></AcercaDeNosotros>}></Route>
+      <Route exact path='/*' element={<Error404></Error404>}></Route>
+      </Routes>
+      <Footer></Footer>
+    </Router>
   );
 }
 

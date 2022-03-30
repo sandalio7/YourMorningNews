@@ -1,38 +1,15 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,300&display=swap');
+
+.logo{
+  font-family: 'Lobster', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fontR{
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bodyy{
+  background: rgb(0,0,36);
+  background: linear-gradient(90deg, rgba(0,0,36,0.9262079831932774) 9%, rgba(255,31,0,0.9122023809523809) 100%);
 }
